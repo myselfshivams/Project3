@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>PSIT KANPUR</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <centre>
+  <div class="overlay">
+    <img src="img/WEB%20NEW6-02.png" alt="Overlay Image">
+  </div>
+
+
+<div class="logo">
+  <img src="img/logo.png" alt="" style="width: 500px;">  
+
+</div>
+<p>
+</p>
+</centre>
+<div class="flex1">
+  <a href="#">PSIT 2K24</a>
+  <a href="#">GALLERY</a>
+  <a href="#">HACKATHON</a>
+  <a href="#">CONTACT US</a>
+   <a href="#">SPONSORS</a> 
+  
+  <a href="#">Ignitia</a>
+
+</div>
+<div class="flex2">
+  <a href="#">EVENTS</a>
+  <a href="#">TEAM</a>
+  <a href="#">LEGALS</a>
+  <a href="#">SCHEDULE</a>
+  <a href="#">GEMS</a>
+    <a href="#">IDEATHON</a>
+</div>
+ <div class="fab">
+             <div class="floater">
+                <ul class="floater__list">
+                    <li class="floater__list-item">
+
+                        <a target="_blank" href="https://www.instagram.com/psit/?hl=en">
+                            <i class="fa-brands fa-instagram "></i></a>
+                    </li>
+                    <li class="floater__list-item">
+
+                        <a target="_blank" href="https://www.facebook.com/psit/">
+
+                            <i class="fa-brands fa-facebook "></i>
+                        </a>
+
+
+                    </li>
+                    <li class="floater__list-item">
+
+                        <a target="_blank" href="https://twitter.com/psit"><i class="fa-brands fa-twitter "></i></a>
+
+
+                    </li>
+                    <li class="floater__list-item">
+
+                        <a target="_blank" href="https://in.linkedin.com/company/psit"><i class="fa-brands fa-linkedin "></i></a>
+
+
+                    </li>
+                    <li class="floater__list-item">
+
+                        <a target="_blank" href="https://youtube.com/psit"><i class="fa-brands fa-youtube "></i></a>
+
+
+                    </li>
+                </ul>
+                <div class="floater__btn">
+                    <svg class="floater__btn-icon floater__btn-icon-plus" width="24px" height="24px" viewBox="672 53 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs></defs>
+                    <path
+                        d="M687,62 L687,54.0006946 C687,53.4474692 686.556414,53 686.009222,53 L681.990778,53 C681.450975,53 681,53.4480262 681,54.0006946 L681,62 L673.000695,62 C672.447469,62 672,62.4435864 672,62.990778 L672,67.009222 C672,67.5490248 672.448026,68 673.000695,68 L681,68 L681,75.9993054 C681,76.5525308 681.443586,77 681.990778,77 L686.009222,77 C686.549025,77 687,76.5519738 687,75.9993054 L687,68 L694.999305,68 C695.552531,68 696,67.5564136 696,67.009222 L696,62.990778 C696,62.4509752 695.551974,62 694.999305,62 L687,62 Z"
+                        id="Combined-Shape" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+                </svg>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+<div class="hamburger">
+  <div class="menu">
+      <ul>
+          <li><a href="#">EVENTS</a></li>
+         
+          <li><a href="#">HACKATHON</a></li>
+          <li><a href="#">GEMS 2.O</a></li>
+          <li><a href="#">HACKATHON 2.O</a></li>
+          <li><a href="#">ERP</a></li>
+          <li><a href="#">IDEATHON</a></li>
+       
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">TEAM</a></li>
+          <li><a href="#">SPONSORS</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">LEGALS</a></li>
+          
+      </ul>
+  </div>
+  <div class="icon-bg">
+      <div class="icon">
+          <span class="rectangle rectangle--top rectangle--small"></span>
+          <span class="rectangle rectangle--middle"></span>
+          <span class="rectangle rectangle--bottom rectangle--small"></span>
+      </div>
+  </div>
+</div>
+
+
+<script type="x-shader/x-vertex" id="vertexshader">
+  attribute float size;
+  attribute vec3 color;
+  attribute float fade;
+
+  varying vec3 vColor;
+
+  void main() {
+    vColor = color;
+    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = size;
+    gl_Position = projectionMatrix * mvPosition;
+  }
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentshader">
+  uniform sampler2D pointTexture;
+  varying vec3 vColor;
+  void main() {
+    gl_FragColor = vec4(vColor, 1.0);
+    gl_FragColor = gl_FragColor * texture2D(pointTexture, gl_PointCoord);
+  }
+</script>
+
+
+
+</body>
+
+
+</html>
